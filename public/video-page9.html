@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>動画ページ</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>動画ページI</h1>
+  
+  <!-- YouTubeの動画を埋め込む -->
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K2VJwTPfcig?si=VFPuPulkGwILZlY2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+
+  <!-- 質問と回答の選択肢 -->
+  <form id="video-questions-form">
+    <!-- 質問1（選択肢） -->
+    <p>このロボットは、複数人以上の会話に入り込むように設計されています。それを前提に以下の問いに答えてください。</p>
+    <div class="form-group">
+      <p>質問1</p>
+      <p>ロボットの目の色の変化について教えてください</p>
+      <label><input type="radio" name="question1" value="1" required> 変化しなかった</label>
+      <label><input type="radio" name="question1" value="2"> 赤く変化した</label>
+      <label><input type="radio" name="question1" value="3"> 青く変化した</label>
+    </div>
+    
+    <!-- 質問2（均等目盛） -->
+    
+    <div class="form-group">
+        
+        <p class="question">質問2:ロボットが以上のアクションをすると、</p>
+        <div class="choices">
+          <label> 話したくないと感じる</label>
+          <label><input type="radio" name="question2" value="1" required> 1</label>
+          <label><input type="radio" name="question2" value="2"> 2</label>
+          <label><input type="radio" name="question2" value="3"> 3</label>
+          <label><input type="radio" name="question2" value="4"> 4</label>
+          <label><input type="radio" name="question2" value="5"> 5</label>
+          <label><input type="radio" name="question2" value="5"> 6</label>
+          <label><input type="radio" name="question2" value="5"> 7</label>
+          <label> 話したいと感じる</label>
+        
+
+        <p class="question">質問3:ロボットが以上のアクションをすると、</p>
+        <div class="choices">
+          <label>話してはいけないと感じる</label>
+          <label><input type="radio" name="question3" value="1" required> 1</label>
+          <label><input type="radio" name="question3" value="2"> 2</label>
+          <label><input type="radio" name="question3" value="3"> 3</label>
+          <label><input type="radio" name="question3" value="4"> 4</label>
+          <label><input type="radio" name="question3" value="5"> 5</label>
+          <label><input type="radio" name="question3" value="5"> 6</label>
+          <label><input type="radio" name="question3" value="5"> 7</label>
+          <label>話さなければならないと感じる</label>
+        </div>
+
+        <p class="question">質問4:以下のスケールに基づいてロボットアクションの印象を評価してください</p>
+        <div class="choices">
+          <label>嫌い</label>
+          <label><input type="radio" name="question4" value="1" required> 1</label>
+          <label><input type="radio" name="question4" value="2"> 2</label>
+          <label><input type="radio" name="question4" value="3"> 3</label>
+          <label><input type="radio" name="question4" value="4"> 4</label>
+          <label><input type="radio" name="question4" value="5"> 5</label>
+          <label>好き</label>
+        </div>
+  
+        <p class="question">質問5:以下のスケールに基づいてロボットアクションの印象を評価してください</p>
+        <div class="choices">
+          <label>親しみにくい</label>
+          <label><input type="radio" name="question5" value="1" required> 1</label>
+          <label><input type="radio" name="question5" value="2"> 2</label>
+          <label><input type="radio" name="question5" value="3"> 3</label>
+          <label><input type="radio" name="question5" value="4"> 4</label>
+          <label><input type="radio" name="question5" value="5"> 5</label>
+          <label>親しみやすい</label>
+        </div>
+
+        <p class="question">質問6:以下のスケールに基づいてロボットアクションの印象を評価してください</p>
+        <div class="choices">
+          <label>不愉快な</label>
+          <label><input type="radio" name="question6" value="1" required> 1</label>
+          <label><input type="radio" name="question6" value="2"> 2</label>
+          <label><input type="radio" name="question6" value="3"> 3</label>
+          <label><input type="radio" name="question6" value="4"> 4</label>
+          <label><input type="radio" name="question6" value="5"> 5</label>
+          <label>愉快な</label>
+        </div>
+
+        <p class="question">質問7:以下のスケールに基づいてロボットアクションの印象を評価してください</p>
+        <div class="choices">
+          <label>ひどい</label>
+          <label><input type="radio" name="question7" value="1" required> 1</label>
+          <label><input type="radio" name="question7" value="2"> 2</label>
+          <label><input type="radio" name="question7" value="3"> 3</label>
+          <label><input type="radio" name="question7" value="4"> 4</label>
+          <label><input type="radio" name="question7" value="5"> 5</label>
+          <label>良い</label>
+        </div>
+      </div>
+
+    <button type="submit" class="next-button">次へ</button>
+  </form>
+</div>
+
+<script src="video-page.js"></script>
+</body>
+</html>
