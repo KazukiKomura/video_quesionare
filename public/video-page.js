@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
       var question6 = document.querySelector('input[name="question6"]:checked').value;
       var question7 = document.querySelector('input[name="question7"]:checked').value;
   
-      console.log('Question 1 Answer:', question1);
-      console.log('Question 2 Answer:', question2);
       // 既存の回答を取得（存在しない場合は空のオブジェクトを使用）
       var answers = JSON.parse(sessionStorage.getItem('answers')) || {};
 
@@ -33,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
           question6: question6,
           question7: question7
       };
-
+      console.log(answers[videoPageId])
       // 更新した回答をセッションストレージに保存
       sessionStorage.setItem('answers', JSON.stringify(answers));
       // シャッフルされた動画ページの配列を取得
@@ -65,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "http://136.187.116.133:28080/upload-csv", true);
         xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    console.log('送信成功: ', xhr.responseText);
+                } else {
+                    console.error('送信失敗: ', xhr.status);
+                }
+            }
+        };
         xhr.send(JSON.stringify({ data: csv }));
 
         // サーバー側の処理が完了した後の処理（例えば、サンキューページへのリダイレクト）

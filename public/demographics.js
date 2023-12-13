@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 動画ページの配列をシャッフル
         let videoPages = [
           'video-page1.html',
-      
+          
           'video-page2.html',
           'video-page3.html',
           'video-page4.html',
@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
           'video-page9.html',
           'video-page10.html',
           'video-page11.html'
+          
         ];
         shuffleArray(videoPages);
         // シャッフルされた順番をセッションストレージに保存
